@@ -2882,15 +2882,7 @@ EOT;
 	 * Check if user has forced https
 	 * @return bool
 	 */
-	private function isHttpsForced(): bool
-	{
-		$value = $this->get('config', 'forceHttps');
-		if (gettype($value) === 'object' && empty(get_object_vars($value))) {
-			return false;
-		}
-
-		return $value ?? false;
-	}
+	
 
 	/**
 	 * Check if user has confirmation dialog enabled
